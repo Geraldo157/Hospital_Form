@@ -16,7 +16,8 @@ class Form extends Model
         'nascimento',
         'comorbidade',
         'alergias',
+        'motivo',
         'telefone',
-        'endereco', 
+        'endereco',
     ];
 }
