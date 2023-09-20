@@ -17,10 +17,11 @@ return new class extends Migration
             $table->string('cpf');
             $table->string('nascimento');
             $table->string('email');
-            $table->string('comorbidade')->nullable();
-            $table->string('alergias')->nullable();
+            $table->string('comorbidade')->nullable()->default(null);
+            $table->string('alergias')->nullable()->default(null);
             $table->string('telefone');
             $table->string('endereco');
+            $table->string('motivo')->default('check-up');
             $table->timestamps();
         });
     }

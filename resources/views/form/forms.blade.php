@@ -9,7 +9,7 @@
 <div class="container">
     <ul>
         @foreach ($forms as $form)
-            <li>$form->name | $form->cpf</li>
+            <li>{{$form->id}} | {{ $form->motivo}}</li>
         @endforeach
     </ul>
 </div>

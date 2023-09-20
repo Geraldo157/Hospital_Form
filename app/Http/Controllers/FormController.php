@@ -28,7 +28,7 @@ class FormController extends Controller
      */
     public function create()
     {
-        return view('form\create_form');
+        return view('form.create');
     }
 
     /**
@@ -36,7 +36,7 @@ class FormController extends Controller
      */
     public function store(Request $request)
     {
-        $created = $this->form->create($request->except(['_token', '_method']));
+        $created = $this->form->create($request->except(['_token']));
         
         if($created) {
             return redirect()->back()->with('message', 'Sucessfully Created!');
@@ -50,7 +50,7 @@ class FormController extends Controller
      */
     public function show(Form $form)
     {
-        return view('form\show_form', ['form' => $form]);
+        return view('form.show_form', ['form' => $form]);
     }
 
     /**
@@ -58,7 +58,7 @@ class FormController extends Controller
      */
     public function edit(Form $form)
     {
-        return view('form\edit_form', ['form' => $form]);
+        return view('form.edit_form', ['form' => $form]);
     }
 
     /**
