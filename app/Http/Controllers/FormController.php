@@ -28,7 +28,7 @@ class FormController extends Controller
      */
     public function create()
     {
-        return view('form.create_forms');
+        return view('form\create_form');
     }
 
     /**
@@ -50,7 +50,7 @@ class FormController extends Controller
      */
     public function show(Form $form)
     {
-        return view('form.show_form', ['form' => $form]);
+        return view('form\show_form', ['form' => $form]);
     }
 
     /**
@@ -58,7 +58,7 @@ class FormController extends Controller
      */
     public function edit(Form $form)
     {
-        return view('form.edit_form', ['form' => $form]);
+        return view('form\edit_form', ['form' => $form]);
     }
 
     /**
