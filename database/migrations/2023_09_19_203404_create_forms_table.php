@@ -17,8 +17,8 @@ return new class extends Migration
             $table->string('cpf');
             $table->string('nascimento');
             $table->string('email');
-            $table->string('comorbidade');
-            $table->string('alergias');
+            $table->string('comorbidade')->nullable();
+            $table->string('alergias')->nullable();
             $table->string('telefone');
             $table->string('endereco');
             $table->timestamps();
