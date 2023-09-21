@@ -9,7 +9,7 @@
 <div class="container">
     <ul>
         @foreach ($forms as $form)
-            <li>{{$form->id}} | {{ $form->motivo ?? 'Check-up' }} | <a href="{{route('forms.edit', ['form'=> $form->id])}}">Edit</a></li>
+            <li>{{$form->id}} | {{ $form->motivo ?? 'Check-up' }} | <a href="{{route('forms.edit', ['form'=> $form->id])}}">Edit</a> | <a href="{{ route('forms.show', ['form' => $form->id]) }}">Show</a></li>
         @endforeach
     </ul>
 </div>

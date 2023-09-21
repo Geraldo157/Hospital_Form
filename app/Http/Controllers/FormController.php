@@ -79,7 +79,7 @@ class FormController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(String $id)
+    public function destroy(string $id)
     {
         $this->form->where('id', $id)->delete();
         return redirect()->route('forms.index');
